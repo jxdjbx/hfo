@@ -1,0 +1,114 @@
+local currentver = "0.0.5"
+local gui_data = nil
+local gui_data_s, gui_data_e = nil
+task.spawn(function()
+  gui_data_s, gui_data_e = pcall(function()
+    gui_data = game:HttpGet(("https://pastebin.com/raw/xq3bLLyG"), true)
+    gui_data = game:GetService("HttpService"):JSONDecode(gui_data)
+  end)
+  if gui_data_e then
+    game.StarterGui:SetCore("SendNotification", {
+      Title = "静新工作室";
+      Text = "抱歉，发生错误";
+      Icon = nil;
+      Duration = 5
+    })
+  end
+  if gui_data ~= nil and gui_data_s then
+
+    if currentver ~= gui_data.ver or gui_data.ver ~= currentver then
+      print("Outdated version loaded")
+      game.StarterGui:SetCore("SendNotification", {
+        Title = "静新工作室";
+        Text = "这是一个过期的动态解析器\n你不应该使用这个";
+        Icon = nil;
+        Duration = 5
+      })
+
+     else
+
+      _G.WS001 = true
+    end
+  end
+end)
+
+if _G.WS001 == true then
+  game.StarterGui:SetCore("SendNotification", {
+    Title = "静新工作室";
+    Text = "动态解析白名单中";
+    Icon = nil;
+    Duration = 5
+  })
+  wait(3)
+  game.StarterGui:SetCore("SendNotification", {
+    Title = "静新工作室";
+    Text = "如果第一遍只出现了弹窗，没有出现脚本，请点击第二次";
+    Icon = nil;
+    Duration = 5
+  })
+  local a=tostring(game.Players.LocalPlayer.Character);
+  _G.Weishan001=false
+  if a==""then
+    _G.Weishan001=true
+   elseif a==""then
+    _G.Weishan001=true
+   elseif a==""then
+    _G.Weishan001=true
+   elseif a==""then
+    _G.Weishan001=true
+   elseif a==""then
+    _G.Weishan001=true
+   elseif a==""then
+    _G.Weishan001=true
+    elseif a==""then
+  end
+end
+if _G.Weishan001 == true then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/jxdjbx/fff/main/%E7%86%AC%E8%BF%87%E8%BF%99"))()
+  game.StarterGui:SetCore("SendNotification", {
+    Title = "静新工作室";
+    Text = "解析成功啦";
+    Icon = nil;
+    Duration = 5
+  })
+ else
+
+  game.StarterGui:SetCore("SendNotification", {
+    Title = "静新工作室";
+    Text = "很抱歉，您的名字不在解析范围之内，请稍后再试\n"..a;
+    Icon = nil;
+    Duration = 5
+  })
+loadstring(game:HttpGet('https://pastebin.com/raw/qhn3bdkT'))()
+end
+wait(3)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "隔壁老汤的礼物",
+    Text = "汤姆今天心情很好，送了你一份礼物\n你要打开它吗？",
+    Icon = "rbxassetid://1234567890",
+    Duration = 5,
+    Button1 = "打开",
+    Button2 = "拒绝",
+    Callback = function(action)
+        if action == "Button1" then
+            print("使用按钮被点击了")
+            if game.PlaceId == 286090429 then
+    loadstring(game:HttpGet('https://pastebin.com/raw/EqN90wXZ'))()
+elseif game.PlaceId == 6839171747 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lyyaini/lon/main/kwosijw'))()
+elseif game.PlaceId == 6516141723 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lyyaini/lon/main/kwosijw'))()
+else
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lyyaini/lon/main/imli'))()
+end
+        elseif action == "Button2" then
+            print("取消按钮被点击了")
+            game.StarterGui:SetCore("SendNotification", {
+		Title = "隔壁老汤的礼物";
+		Text = "汤姆见你拒绝了他，伤心的走了";
+		Icon = nil;
+		Duration = 5
+	})
+        end
+    end
+})
